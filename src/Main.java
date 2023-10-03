@@ -7,12 +7,16 @@ public class Main {
         udskrivData(tabel);
         int sum=sumTabel(tabel);
         int raekkeMedMindsteSum=raekkeMinSum(tabel);
-       /* int raekkeMedStorsteSum=raekkeMaxSum(tabel);*/
+        int raekkeMedStorsteSum=raekkeMaxSum(tabel);
         System.out.println("Summen er: "+sum);
         System.out.println("Rækken med den mindste sum er: "+raekkeMedMindsteSum);
-      /*  System.out.println("Rækken med den største sum er: "+raekkeMedStorsteSum);
+        System.out.println("Rækken med den største sum er: "+raekkeMedStorsteSum);
 
-        int [] tabelMedRaekkeSum=raekkeSum(tabel);*/
+        int [] tabelMedRaekkeSum=raekkeSum(tabel);
+        for(int i=0;i<3;i++) {
+            System.out.println(tabelMedRaekkeSum[i]);
+            System.out.println("Hej");
+        }
         //Indsæt statements til at udskrive værdieren i tabelMedRaekkeSum
     }
 
@@ -103,7 +107,20 @@ public class Main {
         int [] rSum=new int[a.length];
         //Indsæt statements
 
+        int sum=0;
+
+        for(int i=0;i<3;i++){
+            for(int j=0;j<4;j++){
+                sum+=a[i][j];
+            }
+            rSum[i]=sum;
+            sum=0;
+        }
+
         return rSum;
     }
 
 }
+
+
+
